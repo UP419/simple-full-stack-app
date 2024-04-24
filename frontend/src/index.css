@@ -1,0 +1,28 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contacts_list{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.buttons button{
+    margin-right: 10px;
+}
