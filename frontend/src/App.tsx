@@ -32,10 +32,12 @@ function App() {
       <ContactList contacts={contacts} fetchContacts={fetchContacts}/>
       <button onClick={openModal}>Create new contact</button>
       { isModalOpen && 
-        <div className="modal">
-          <button onClick={closeModal}>&times;</button>
-          <ContactForm updateFn={fetchContacts}/>
-        </div>
+        <div className="modal_background">
+          <div className="modal">
+            <button onClick={closeModal}>&times;</button>
+            <ContactForm updateFn={fetchContacts}/>
+          </div>
+        </div>  
       }
     </div>
   )

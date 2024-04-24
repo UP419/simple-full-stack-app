@@ -46,13 +46,18 @@ const ContactList = ({contacts, fetchContacts}) => {
                         <button onClick={() => handleDelete(contact)}>Delete</button>
                     </div>
                     {updateRow == contact.id &&
-                        <ContactForm firstNameProp={contact.firstName}
-                         lastNameProp={contact.lastName}
-                          emailProp={contact.email} 
-                          id={contact.id}
-                        isUpdate={true}
-                        updateFn={handleUpdate}
-                        />
+                         <div className="modal_background">
+                            <div className="modal">
+                                <button onClick={() => setUpdateRow(-1)}>&times;</button>
+                                <ContactForm firstNameProp={contact.firstName}
+                                lastNameProp={contact.lastName}
+                                emailProp={contact.email} 
+                                id={contact.id}
+                                isUpdate={true}
+                                updateFn={handleUpdate}
+                                />
+                            </div>
+                        </div>    
                     }
                 </div>
             )
